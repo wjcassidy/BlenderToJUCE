@@ -16,7 +16,7 @@ BlenderToJUCEAudioProcessorEditor::BlenderToJUCEAudioProcessorEditor (BlenderToJ
     setSize (1920 / 2, 1080 / 2);
     
     drive_slider.setName ("Drive");
-//    drive_slider.setLookAndFeel (&custom_look_and_feel_);
+    drive_slider.setLookAndFeel (&custom_look_and_feel_);
     drive_slider.setSliderStyle (juce::Slider::SliderStyle::RotaryVerticalDrag);
     drive_slider.setTextBoxStyle (juce::Slider::NoTextBox, false, 60, 20);
     
@@ -33,12 +33,14 @@ BlenderToJUCEAudioProcessorEditor::~BlenderToJUCEAudioProcessorEditor()
 //==============================================================================
 void BlenderToJUCEAudioProcessorEditor::paint (juce::Graphics& g)
 {
+    auto background_image {juce::ImageCache::getFromMemory(BinaryData::background_png, BinaryData::background_pngSize)};
+    
+    g.drawImageWithin(background_image, 0, 0, getWidth(), getHeight(), juce::RectanglePlacement::fillDestination);
 }
 
 void BlenderToJUCEAudioProcessorEditor::resized()
 {
-    juce::Rectangle<int> slider_bounds = {50, 50, 100, 100};
-    drive_slider.setBounds(slider_bounds);
+    SetBoundsFromBlender(drive_slider, 0.24589478969573975, 0.21553641557693481, 0.5874119997024536, 0.761963963508606);
 }
 
 void BlenderToJUCEAudioProcessorEditor::SetBoundsFromBlender (juce::Slider &slider,

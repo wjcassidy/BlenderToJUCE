@@ -16,4 +16,5 @@ public:
                            float rotaryEndAngle,
                            juce::Slider & slider) override;
 private:
+    static constexpr auto kNumSliderStages = 25;
 };

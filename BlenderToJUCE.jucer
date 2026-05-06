@@ -17,7 +17,11 @@
       <FILE id="iIT6P1" name="CustomLookAndFeel.h" compile="0" resource="0"
             file="Source/CustomLookAndFeel.h"/>
     </GROUP>
-    <GROUP id="{E1184C47-B327-6042-BDDF-12AC1F9CE35F}" name="Assets"/>
+    <GROUP id="{E1184C47-B327-6042-BDDF-12AC1F9CE35F}" name="Assets">
+      <FILE id="jioKDo" name="background.png" compile="0" resource="1" file="Assets/background.png"/>
+      <FILE id="pTHLSV" name="dial_image_sheet.jpg" compile="0" resource="1"
+            file="Assets/dial_image_sheet.jpg"/>
+    </GROUP>
   </MAINGROUP>
   <MODULES>
     <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
