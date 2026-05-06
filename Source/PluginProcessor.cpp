@@ -151,7 +151,7 @@ void BlenderToJUCEAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer
         for (int sample_index = 0; sample_index < buffer.getNumSamples(); ++sample_index)
         {
             auto input_sample = buffer.getSample(channel_index, sample_index);
-            auto saturated_sample = tanh(*drive_parameter_value_ * input_sample);
+            auto saturated_sample = std::tanh(*drive_parameter_value_ * input_sample);
             
             buffer.setSample(channel_index, sample_index, saturated_sample);
         }

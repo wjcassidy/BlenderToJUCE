@@ -15,14 +15,14 @@ BlenderToJUCEAudioProcessorEditor::BlenderToJUCEAudioProcessorEditor (BlenderToJ
 {
     setSize (1920 / 2, 1080 / 2);
     
-    drive_slider.setName ("Drive");
+    drive_slider_.setName ("Drive");
 //    drive_slider.setLookAndFeel (&custom_look_and_feel_);
-    drive_slider.setSliderStyle (juce::Slider::SliderStyle::RotaryVerticalDrag);
-    drive_slider.setTextBoxStyle (juce::Slider::NoTextBox, false, 60, 20);
+    drive_slider_.setSliderStyle (juce::Slider::SliderStyle::RotaryVerticalDrag);
+    drive_slider_.setTextBoxStyle (juce::Slider::NoTextBox, false, 60, 20);
     
-    drive_parameter_attachment_.reset (new juce::AudioProcessorValueTreeState::SliderAttachment (parameters_, "drive", drive_slider));
+    drive_parameter_attachment_.reset (new juce::AudioProcessorValueTreeState::SliderAttachment (parameters_, "drive", drive_slider_));
     
-    addAndMakeVisible (drive_slider);
+    addAndMakeVisible (drive_slider_);
 }
 
 BlenderToJUCEAudioProcessorEditor::~BlenderToJUCEAudioProcessorEditor()
@@ -38,7 +38,7 @@ void BlenderToJUCEAudioProcessorEditor::paint (juce::Graphics& g)
 void BlenderToJUCEAudioProcessorEditor::resized()
 {
     juce::Rectangle<int> slider_bounds = {50, 50, 100, 100};
-    drive_slider.setBounds(slider_bounds);
+    drive_slider_.setBounds(slider_bounds);
 }
 
 void BlenderToJUCEAudioProcessorEditor::SetBoundsFromBlender (juce::Slider &slider,

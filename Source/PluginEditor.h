@@ -33,7 +33,7 @@ private:
     
     CustomLookAndFeel custom_look_and_feel_;
     
-    juce::Slider drive_slider;
+    juce::Slider drive_slider_;
     
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> drive_parameter_attachment_;
     
