@@ -41,7 +41,7 @@ void BlenderToJUCEAudioProcessorEditor::resized()
     drive_slider_.setBounds(slider_bounds);
 }
 
-void BlenderToJUCEAudioProcessorEditor::SetBoundsFromBlender (juce::Slider &slider,
+void BlenderToJUCEAudioProcessorEditor::setBoundsFromBlender (juce::Slider &slider,
                                                               double min_x,
                                                               double min_y,
                                                               double max_x,

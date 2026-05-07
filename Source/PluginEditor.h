@@ -26,7 +26,7 @@ public:
     void resized() override;
 
 private:
-    void SetBoundsFromBlender (juce::Slider &slider, double min_x, double min_y, double max_x, double max_y);
+    void setBoundsFromBlender (juce::Slider &slider, double min_x, double min_y, double max_x, double max_y);
     
     BlenderToJUCEAudioProcessor& processor_;
     juce::AudioProcessorValueTreeState& parameters_;
