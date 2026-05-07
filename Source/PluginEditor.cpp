@@ -16,7 +16,7 @@ BlenderToJUCEAudioProcessorEditor::BlenderToJUCEAudioProcessorEditor (BlenderToJ
     setSize (1920 / 2, 1080 / 2);
     
     drive_slider_.setName ("Drive");
-//    drive_slider.setLookAndFeel (&custom_look_and_feel_);
+//    drive_slider_.setLookAndFeel (&custom_look_and_feel_);
     drive_slider_.setSliderStyle (juce::Slider::SliderStyle::RotaryVerticalDrag);
     drive_slider_.setTextBoxStyle (juce::Slider::NoTextBox, false, 60, 20);
     
